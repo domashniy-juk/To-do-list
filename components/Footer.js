@@ -19,9 +19,9 @@ class Footer extends React.Component{
             <input type= "submit" value = {String.fromCharCode(9997)}></input>
         </form>
         <div className = 'nav'>
-            <button onClick = {this.props.navigation.bind(null, -10)}> {String.fromCharCode(171)} </button> 
+            <button onClick = {this.props.navigation.bind(null, -10)}> <span>{String.fromCharCode(171)}</span> </button> 
             <strong>{this.props.page / 10 + 1}</strong> 
-            <button onClick = {this.props.navigation.bind(null, 10)}> {String.fromCharCode(187)} </button>
+            <button onClick = {this.props.navigation.bind(null, 10)}> <span>{String.fromCharCode(187)}</span> </button>
         </div>
         <style jsx>{`
             form {
@@ -32,7 +32,8 @@ class Footer extends React.Component{
             textarea {
                 height: 50px;
                 width: 70%;
-                min-width: 200px
+                min-width: 200px;
+                
             }
             input[type='submit'] {
                 height: 56px;
@@ -64,6 +65,14 @@ class Footer extends React.Component{
             button:focus, button:hover {
                 outline: none;
                 cursor: pointer;
+            }
+            button:hover {
+                background-color: red;
+                color: white;
+            }
+            span{
+                position: relative;
+                bottom: 2px;
             }
 
         `}

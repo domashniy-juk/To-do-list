@@ -59,6 +59,10 @@ class Main extends React.Component{
                 button:focus, button:hover {
                     outline: none;
                     cursor: pointer;
+                    color: red;
+                }
+                button:hover {
+                    color: red;
                 }
 
                 
